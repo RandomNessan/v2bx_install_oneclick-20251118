@@ -145,7 +145,7 @@ install_V2bX() {
         fi
     else
         last_version=$1
-        url="https://github.com/wyx2685/V2bX-20251118/releases/download/${last_version}/V2bX-linux-${arch}.zip"
+        url="https://github.com/RandomNessan/V2bX-20251118/releases/download/${last_version}/V2bX-linux-${arch}.zip"
         echo -e "开始安装 V2bX $1"
         wget --no-check-certificate -N --progress=bar -O /usr/local/V2bX/V2bX-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
@@ -246,7 +246,7 @@ EOF
     if [[ ! -f /etc/V2bX/custom_inbound.json ]]; then
         cp custom_inbound.json /etc/V2bX/
     fi
-    curl -o /usr/bin/V2bX -Ls https://raw.githubusercontent.com/RandomNessan/v2bx_install_oneclick-20251118/V2bX.sh
+    curl -o /usr/bin/V2bX -Ls https://raw.githubusercontent.com/RandomNessan/v2bx_install_oneclick-20251118/main/V2bX.sh
     chmod +x /usr/bin/V2bX
     if [ ! -L /usr/bin/v2bx ]; then
         ln -s /usr/bin/V2bX /usr/bin/v2bx
